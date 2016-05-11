@@ -1,4 +1,6 @@
 # react-native-babel-jest
+[![Build Status](https://travis-ci.org/apentle/react-native-babel-jest.svg?branch=master)](https://travis-ci.org/apentle/react-native-babel-jest) [![Coverage Status](https://coveralls.io/repos/github/apentle/react-native-babel-jest/badge.svg?branch=master)](https://coveralls.io/github/apentle/react-native-babel-jest?branch=master)
+
 Simple testing configuration for React Native with Jest
 
 ## Installation
@@ -38,4 +40,3 @@ npm test
 
 ## Example
 [See this example](https://github.com/apentle/react-native-babel-jest/blob/master/Example/README.md)
-
