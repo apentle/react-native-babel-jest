@@ -3,7 +3,7 @@ node_js:
   - "4.2"
 
 install:
-  - npm install --save react react-native
+  - npm install --save react@0.14.7 react-native@0.22.2
   - npm install --save-dev coveralls
   - npm install
 
