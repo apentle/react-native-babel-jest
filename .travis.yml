@@ -3,8 +3,8 @@ node_js:
   - "4.2"
 
 install:
+  - sed -i 's/"react-native-mock"/"react": "^0.14.7","react-native": "^0.22.2","react-native-mock"/g' package.json
   - npm install
-  - npm install --save react-native@0.22.2
   - npm install --save invariant warning
   - npm install --save-dev coveralls
 
