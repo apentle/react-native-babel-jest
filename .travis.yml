@@ -3,7 +3,7 @@ node_js:
   - "4.2"
 
 install:
-  - npm install --save react@0.14.7 react-native@0.22.2
+  - npm install --save react-native
   - npm install --save-dev coveralls
   - npm install
 
@@ -15,4 +15,13 @@ after_script:
 
 branches:
   only:
-    - master
+    - develop
+
+addons:
+  packages:
+    - gcc-4.8
+    - g++-4.8
+
+env:
+  - CC=gcc-4.8
+  - CXX=g++-4.8
