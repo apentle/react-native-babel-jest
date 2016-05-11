@@ -5,6 +5,7 @@ node_js:
   - "4.2"
 
 before_script:
+  - npm install react react-native
   - npm install coveralls --save-dev
 
 script:
