@@ -4,8 +4,11 @@ node_js:
   - "5.1"
   - "4.2"
 
-before_script:
+install:
+  - npm install
   - npm install react react-native
+
+before_script:
   - npm install coveralls --save-dev
 
 script:
