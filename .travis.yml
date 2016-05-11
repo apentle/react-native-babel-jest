@@ -1,15 +1,11 @@
 language: node_js
 node_js:
-  - "5"
-  - "5.1"
   - "4.2"
 
 install:
+  - npm install --save react react-native
+  - npm install --save-dev coveralls
   - npm install
-  - npm install react react-native
-
-before_script:
-  - npm install coveralls --save-dev
 
 script:
   - npm test
