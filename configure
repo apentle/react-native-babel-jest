@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Remove old library folder
+if [ -d react-native-mock ]; then
+	if [ "$1" == "--test" ]; then
+		echo 'Already done'
+		exit
+	fi
+	rm -Rf react-native-mock
+fi
+
+# Check & install react-native-mock
+if [ ! -d node_modules/react-native-mock ]; then
+	npm install
+fi
+
+# Copy to project folder
+cp -Rf node_modules/react-native-mock/build react-native-mock
+cp node_modules/react-native-mock/LICENSE react-native-mock/
+echo 'Done'

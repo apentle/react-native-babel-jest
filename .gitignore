@@ -1,0 +1,10 @@
+# node.js
+#
+node_modules
+npm-debug.log
+
+# ignore testing coverage
+coverage
+
+# react-native-mock library
+react-native-mock
