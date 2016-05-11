@@ -1,19 +1,18 @@
-# react-native-babel-jest
-Simple testing configuration for React Native with Jest
-
-## Installation
-```bash
-npm i --save-dev react-native-babel-jest
-```
-
-## Usage
-Add configuration to `package.json` file
-```bash
 {
+  "name": "TestingExample",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
   },
-  ...
+  "dependencies": {
+    "react": "^0.14.7",
+    "react-native": "^0.22.2"
+  },
+  "devDependencies": {
+    "react-native-babel-jest": "^0.0.1"
+  },
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/react-native-babel-jest",
     "setupEnvScriptFile": "<rootDir>/node_modules/react-native-babel-jest/env.js",
@@ -30,12 +29,3 @@ Add configuration to `package.json` file
     ]
   }
 }
-```
-Write your test in `__tests__` folder, run test command
-```bash
-npm test
-```
-
-## Example
-[See this example](https://github.com/apentle/react-native-babel-jest/blob/master/Example/README.md)
-
