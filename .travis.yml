@@ -2,20 +2,6 @@ language: node_js
 node_js:
   - "4.2"
 
-install:
-  - npm config set spin=false
-  - npm config set progress=false
-  - npm install --save react-native@0.22.2
-  - npm install --save invariant warning
-  - npm install --save-dev coveralls
-  - npm install
-
-script:
-  - npm test
-
-after_script:
-  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
-
 branches:
   only:
     - develop
