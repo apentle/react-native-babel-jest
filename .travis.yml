@@ -3,7 +3,7 @@ node_js:
   - "4.2"
 
 install:
-  - npm install --save react-native invariant
+  - npm install --save react-native@0.22.2 invariant
   - npm install --save-dev coveralls
   - npm install
 
