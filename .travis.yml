@@ -5,7 +5,6 @@ node_js:
 install:
   - ./travis
   - npm install
-  - npm install --save invariant warning
   - npm install --save-dev coveralls
 
 script:
