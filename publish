@@ -2,8 +2,7 @@
 
 # Remove old library folder
 if [ -d react-native-mock ]; then
-	echo 'Already done'
-	exit
+	rm -Rf react-native-mock
 fi
 
 # Check & install react-native-mock
@@ -13,10 +12,13 @@ fi
 
 # Copy react-native-mock to project folder
 cp -Rf node_modules/react-native-mock/build react-native-mock
+cp node_modules/react-native-mock/LICENSE react-native-mock/
 
-if [ "$1" == "--test" ]; then
-	# Testing copy
-	cp -Rn node_modules/react-native-mock/node_modules/* node_modules/
+# Update dependencies
+node configure.js
+if [ "$1" != "--local" ]; then
+	npm publish
+	git checkout -- package.json
 fi
 
 echo 'Done'

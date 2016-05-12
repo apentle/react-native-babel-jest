@@ -3,3 +3,10 @@ coverage
 
 # Example
 Example
+
+# DEV Enviroment
+__tests__
+configure
+configure.js
+travis
+publish
