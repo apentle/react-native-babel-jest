@@ -11,7 +11,7 @@
     "react-native": "^0.22.2"
   },
   "devDependencies": {
-    "react-native-babel-jest": "^0.0.1"
+    "react-native-babel-jest": "^0.x"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/react-native-babel-jest",
