@@ -1,8 +1,7 @@
 'use strict';
 
-const React = require('react-native');
-const { View } = React;
-const TestUtils = require('react/lib/ReactTestUtils');
+import React, { View, Text } from 'react-native';
+import { shallow, mount } from 'enzyme';
 
 jest.unmock('../ShowComponent');
 const ShowComponent = require('../ShowComponent');
@@ -10,13 +9,12 @@ const ShowComponent = require('../ShowComponent');
 describe('<ShowComponent />', () => {
   it('Component must show "Show Text"', () => {
     // Shallow rendering
-    const renderer = TestUtils.createRenderer();
-    renderer.render(<ShowComponent />);
-    let output = renderer.getRenderOutput();
-    expect(output.type).toBe(View);
-    // Deep render to DOM
-    const dom = TestUtils.renderIntoDocument(<ShowComponent />);
-    const txtNode = TestUtils.findRenderedDOMComponentWithClass(dom, 'Text');
-    expect(txtNode.textContent).toBe('Show Text');
+    const output = shallow(<ShowComponent />);
+    expect(output.type()).toBe(View);
+    expect(output.find(Text).length).toBe(1);
+
+    // Full DOM rendering
+    const wrapper= mount(<ShowComponent />);
+    expect(wrapper.find(Text).text()).toBe('Show Text');
   });
 });

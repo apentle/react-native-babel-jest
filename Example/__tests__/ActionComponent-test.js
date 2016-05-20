@@ -1,19 +1,18 @@
 'use strict';
 
-const React = require('react-native');
-const TestUtils = require('react/lib/ReactTestUtils');
+import React, { Text, TouchableOpacity } from 'react-native';
+import { mount } from 'enzyme';
 
 jest.unmock('../ActionComponent');
 const ActionComponent = require('../ActionComponent');
 
 describe('<ActionComponent />', () => {
   it('Component response to user action', () => {
-    // Deep render to DOM
-    const dom = TestUtils.renderIntoDocument(<ActionComponent />);
-    const txtNode = TestUtils.findRenderedDOMComponentWithClass(dom, 'Text');
-    expect(txtNode.textContent).toBe('Off');
+    // Full DOM rendering
+    const wrapper = mount(<ActionComponent />);
+    expect(wrapper.find(Text).text()).toBe('Off');
     // Simulate user tap
-    TestUtils.Simulate.click(TestUtils.findRenderedDOMComponentWithClass(dom, 'TouchableOpacity'));
-    expect(txtNode.textContent).toBe('On');
+    wrapper.find(TouchableOpacity).simulate('click');
+    expect(wrapper.find(Text).text()).toBe('On');
   });
 });

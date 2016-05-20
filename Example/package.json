@@ -24,6 +24,7 @@
     ],
     "unmockedModulePathPatterns": [
       "react",
+      "enzyme",
       "promise",
       "source-map"
     ]
