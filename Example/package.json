@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "enzyme": "^2.2.0",
+    "babel-preset-airbnb": "2.0.0",
     "react-native-babel-jest": "^0.x"
   },
   "jest": {
