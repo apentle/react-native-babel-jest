@@ -76,4 +76,11 @@ const renderToHTML = (type) => {
   'WebView',
 ].forEach(renderToHTML);
 
+/**
+ * ListView mock for react native
+ */
+ReactNative.ListView.defaultProps = {
+  renderScrollComponent: props => <ReactNative.ScrollView {...props} />,
+};
+
 module.exports = ReactNative;
