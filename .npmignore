@@ -10,3 +10,4 @@ configure
 configure.js
 travis
 publish
+.travis.yml
