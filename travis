@@ -13,8 +13,7 @@ cd ..
 else
 
 # run before install in travis-ci
-sed -i 's/"jest-cli"/"react": "^0.14.7","react-native": "^0.22.2","jest-cli"/g' package.json
-
+npm install react react-native
 npm install --only=dev
 node configure.js
 

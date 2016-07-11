@@ -5,12 +5,12 @@ Simple testing configuration for React Native with Jest
 
 ## Installation
 ```bash
-npm i --save-dev react-native-babel-jest
+npm i --save-dev react-native-babel-jest jest-cli
 ```
 
 ## Usage
 Add configuration to `package.json` file
-```bash
+```javascript
 {
   "scripts": {
     "test": "jest"

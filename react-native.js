@@ -14,20 +14,21 @@ const renderToHTML = (type) => {
   if (typeof proto !== 'undefined') {
     const render = function () {
       var properties = {className: type};
+      Object.assign(properties, this.props);
       /**
        * use onClick for Simulate instead of onPress
        */
       if (typeof this.props.onPress !== 'undefined') {
         properties.onClick = this.props.onPress;
+        delete properties.onPress;
       }
       // TODO: add more event mapping
-      Object.assign(properties, this.props);
       return (
         <div {...properties}>{this.props.children}</div>
       );
     };
-    proto.__reactAutoBindMap['render'] = render;
-    proto.render = render;
+    //proto.__reactAutoBindPairs[proto.__reactAutoBindPairs.indexOf['render'] + 1] = render;
+    proto['render'] = render;
   }
 };
 
@@ -75,12 +76,5 @@ const renderToHTML = (type) => {
   'ViewPagerAndroid',
   'WebView',
 ].forEach(renderToHTML);
-
-/**
- * ListView mock for react native
- */
-ReactNative.ListView.defaultProps = {
-  renderScrollComponent: props => <ReactNative.ScrollView {...props} />,
-};
 
 module.exports = ReactNative;
