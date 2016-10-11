@@ -1,6 +1,6 @@
 {
   "name": "react-native-babel-jest",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple testing configuration for React Native with Jest",
   "main": "index.js",
   "scripts": {
