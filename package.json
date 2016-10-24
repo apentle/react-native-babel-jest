@@ -1,9 +1,10 @@
 {
   "name": "react-native-babel-jest",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Simple testing configuration for React Native with Jest",
   "main": "index.js",
   "scripts": {
+    "build": "babel --presets react-native src --out-dir react-native",
     "pretest": "./configure --test",
     "test": "jest --coverage",
     "prepublish": "./configure"
@@ -36,7 +37,8 @@
     "react-native": "*"
   },
   "devDependencies": {
-    "jest-cli": "^13.2.3",
+    "babel-cli": "^6.16.0",
+    "jest-cli": "^16.0.2",
     "jsonfile": "^2.3.0",
     "react-native-mock": "^0.2.4"
   },
@@ -48,11 +50,9 @@
       "/react-native-mock/"
     ],
     "collectCoverageOnlyFrom": {
-      "react-native.js": true
+      "react-native/index.js": true
     },
-    "testFileExtensions": [
-      "js"
-    ],
+    "automock": true,
     "unmockedModulePathPatterns": [
       "react",
       "promise",

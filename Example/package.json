@@ -13,18 +13,16 @@
   "devDependencies": {
     "babel-preset-airbnb": "2.0.0",
     "enzyme": "^2.2.0",
+    "enzyme-to-json": "^1.1.4",
     "react-dom": "^15.2.1",
     "react-native-babel-jest": "^0.x"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/react-native-babel-jest",
-    "setupEnvScriptFile": "<rootDir>/node_modules/react-native-babel-jest/env.js",
-    "testPathIgnorePatterns": [
-      "/node_modules/"
+    "setupFiles": [
+      "<rootDir>/node_modules/react-native-babel-jest/env.js"
     ],
-    "testFileExtensions": [
-      "js"
-    ],
+    "automock": true,
     "unmockedModulePathPatterns": [
       "react",
       "enzyme",

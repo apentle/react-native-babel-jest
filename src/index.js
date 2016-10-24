@@ -3,7 +3,7 @@
  */
 'use strict';
 
-const ReactNative = require('./react-native-mock/react-native');
+const ReactNative = require('../react-native-mock/react-native');
 const React = require('react');
 
 /**

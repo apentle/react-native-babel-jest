@@ -7,4 +7,5 @@ npm-debug.log
 coverage
 
 # react-native-mock library
-react-native-mock
+react-native-mock/
+react-native/

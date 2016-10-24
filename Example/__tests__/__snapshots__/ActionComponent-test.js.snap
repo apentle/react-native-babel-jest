@@ -1,0 +1,97 @@
+exports[`<ActionComponent /> Component response to user action 1`] = `
+<ActionComponent>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "red",
+      }
+    }>
+    <div
+      className="View"
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "red",
+        }
+      }>
+      <TouchableOpacity
+        onPress={[Function]}>
+        <div
+          className="TouchableOpacity"
+          onClick={[Function]}>
+          <Text
+            style={
+              Object {
+                "fontSize": 20,
+                "margin": 10,
+                "textAlign": "center",
+              }
+            }>
+            <div
+              className="Text"
+              style={
+                Object {
+                  "fontSize": 20,
+                  "margin": 10,
+                  "textAlign": "center",
+                }
+              }>
+              Off
+            </div>
+          </Text>
+        </div>
+      </TouchableOpacity>
+    </div>
+  </View>
+</ActionComponent>
+`;
+
+exports[`<ActionComponent /> Component response to user action 2`] = `
+<ActionComponent>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "red",
+      }
+    }>
+    <div
+      className="View"
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "red",
+        }
+      }>
+      <TouchableOpacity
+        onPress={[Function]}>
+        <div
+          className="TouchableOpacity"
+          onClick={[Function]}>
+          <Text
+            style={
+              Object {
+                "fontSize": 20,
+                "margin": 10,
+                "textAlign": "center",
+              }
+            }>
+            <div
+              className="Text"
+              style={
+                Object {
+                  "fontSize": 20,
+                  "margin": 10,
+                  "textAlign": "center",
+                }
+              }>
+              On
+            </div>
+          </Text>
+        </div>
+      </TouchableOpacity>
+    </div>
+  </View>
+</ActionComponent>
+`;

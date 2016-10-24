@@ -18,15 +18,13 @@ Add configuration to `package.json` file
   ...
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/react-native-babel-jest",
-    "setupEnvScriptFile": "<rootDir>/node_modules/react-native-babel-jest/env.js",
-    "testPathIgnorePatterns": [
-      "/node_modules/"
+    "setupFiles": [
+      "<rootDir>/node_modules/react-native-babel-jest/env.js"
     ],
-    "testFileExtensions": [
-      "js"
-    ],
+    "automock": true,
     "unmockedModulePathPatterns": [
       "react",
+      "enzyme",
       "promise",
       "source-map"
     ]
@@ -37,6 +35,9 @@ Write your test in `__tests__` folder, run test command
 ```bash
 npm test
 ```
+
+## Recommendation
+We recommend you using `enzyme` to render components, and `enzyme-to-json` to make snapshot testing. See more in the example below.
 
 ## Example
 [See this example](https://github.com/apentle/react-native-babel-jest/blob/master/Example/README.md)

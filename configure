@@ -1,5 +1,7 @@
 #!/bin/bash
 
+npm run build
+
 # Remove old library folder
 if [ -d react-native-mock ]; then
 	echo 'Already done'

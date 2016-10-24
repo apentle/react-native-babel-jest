@@ -1,0 +1,19 @@
+exports[`<ShowComponent /> Component must show "Show Text" 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+    }
+  }>
+  <Text
+    style={
+      Object {
+        "fontSize": 20,
+        "margin": 10,
+        "textAlign": "center",
+      }
+    }>
+    Show Text
+  </Text>
+</View>
+`;
