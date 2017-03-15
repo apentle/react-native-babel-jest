@@ -1,6 +1,6 @@
 'use strict';
 
-require.requireActual('react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js');
+require.requireActual('react-native/packager/src/Resolver/polyfills/babelHelpers.js');
 
 global.__DEV__ = true;
 global.__fbBatchedBridgeConfig = {
