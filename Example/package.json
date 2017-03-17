@@ -15,7 +15,7 @@
     "enzyme": "^2.2.0",
     "enzyme-to-json": "^1.1.4",
     "react-dom": "^15.2.1",
-    "react-native-babel-jest": "^0.x"
+    "react-native-babel-jest": "file:../"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/react-native-babel-jest",
